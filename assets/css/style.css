@@ -1,3 +1,5 @@
+/* style.css */
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -9,8 +11,23 @@ body {
 
 .task-card {
   margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
 }
 
 .task-card:hover {
   cursor: grab;
+  background-color: #f8f9fa;
+}
+
+.overdue {
+  background-color: red;
+  color: white;
+}
+
+.nearing-deadline {
+  background-color: yellow;
+  color: black;
 }
