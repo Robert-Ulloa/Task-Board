@@ -17,14 +17,18 @@ function createTaskCard(task) {
             <button class="btn btn-danger btn-sm delete-task">Delete</button>
         </div>
     `);
-    if (dayjs().isAfter(dayjs(task.deadline))) {
+
+    let today = dayjs();
+    let deadline = dayjs(task.deadline);
+    if (today.isAfter(deadline, 'day')) {
         taskCard.addClass("overdue");
-    } else if (dayjs().diff(dayjs(task.deadline), 'day') <= 2) {
+    } else if (deadline.diff(today, 'day') <= 2) {
         taskCard.addClass("nearing-deadline");
     }
 
     taskCard.data("task", task);
     return taskCard;
+
 }
 
 // Render the task list and make cards draggable
@@ -46,7 +50,7 @@ function renderTaskList() {
         drop: handleDrop
     });
 
-    $(".delete-task").click(handleDeleteTask);
+    $(document).on('click', '.delete-task', handleDeleteTask);
 }
 
 // Handle adding a new task
@@ -84,7 +88,7 @@ function handleDeleteTask(event) {
 // Handle dropping a task into a new status lane
 function handleDrop(event, ui) {
     const taskId = ui.helper.data("id");
-    const newStatus = $(event.target).closest(".lane").attr("id");
+    const newStatus = $(event.target).closest(".lane").attr("id").replace('-cards', '');
 
     taskList.forEach(task => {
         if (task.id === taskId) {

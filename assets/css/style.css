@@ -7,6 +7,7 @@ body {
 
 .swim-lanes {
   min-height: 60vh;
+
 }
 
 .task-card {
@@ -15,11 +16,7 @@ body {
   border-radius: 5px;
   border: 1px solid #ddd;
   margin-bottom: 10px;
-}
-
-.task-card:hover {
-  cursor: grab;
-  background-color: #f8f9fa;
+  z-index: 1;
 }
 
 .overdue {
@@ -31,3 +28,4 @@ body {
   background-color: yellow;
   color: black;
 }
+
