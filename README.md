@@ -20,15 +20,15 @@ Task Board is a simple Kanban board for task management. It allows you to create
 
 ## Deployment link
 
-https://robert-ulloa.github.io/my-personal-blog/
+https://robert-ulloa.github.io/Task-Board/
 
-## Github link
-https://github.com/Robert-Ulloa/my-personal-blog
+## Github link (repo)
 
+https://github.com/Robert-Ulloa/Task-Board
 
-## GIF
+## Screenshot
 
-![Gift show casing the funtionality of the portfolio](./assets/images/blogGif.gif)
+![Screenshot show casing the funtionality of the portfolio](./assets/images/Screenshot%202024-06-17%20at%202.48.03 PM.png)
 
 ## Contributing
 I welcome contributions to improve this portfolio website. If you have suggestions or improvements, please create an issue or submit a pull request.
