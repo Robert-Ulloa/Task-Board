@@ -32,7 +32,7 @@ function createTaskCard(task) {
 
 // Render the task list and make cards draggable and lanes droppable
 function renderTaskList() {
-    $("#todo-cards, #in-progress-cards, #done-cards").empty();
+    $("#to-do-cards, #in-progress-cards, #done-cards").empty();
 
     taskList.forEach(task => {
         const taskCard = createTaskCard(task);
@@ -95,9 +95,11 @@ function handleDrop(event, ui) {
         }
     });
 
+
     localStorage.setItem("tasks", JSON.stringify(taskList));
     renderTaskList();
 }
+
 
 // When the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function () {
