@@ -28,10 +28,9 @@ function createTaskCard(task) {
 
     taskCard.data("task", task);
     return taskCard;
-
 }
 
-// Render the task list and make cards draggable
+// Render the task list and make cards draggable and lanes droppable
 function renderTaskList() {
     $("#todo-cards, #in-progress-cards, #done-cards").empty();
 
@@ -41,7 +40,7 @@ function renderTaskList() {
     });
 
     $(".task-card").draggable({
-        revert: "invalid",
+        revert: "valid",
         helper: "clone"
     });
 
